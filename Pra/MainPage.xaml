@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pra.MainPage"
+             >
+    <Grid RowDefinitions="Auto,*,Auto"
+          >
+
+        <Grid BackgroundColor="#40C95A"
+              HeightRequest="80"
+              Padding="15,10">
+            <Label Text="Главная"
+                   TextColor="White"
+                   FontSize="30"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontFamily="Finlandica"/>
+        </Grid>
+
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20"
+                                 Spacing="30">
+
+
+                <Border StrokeThickness="0"
+                        BackgroundColor="#DDE7D8"
+                       Padding="20"
+                        >
+
+                    <VerticalStackLayout Spacing="15">
+                        <Label Text="Процесс"
+                               FontSize="48"
+                               HorizontalOptions="Center"
+                               TextColor="#333"
+                               FontFamily="Finlandica"/>
+
+                        <ProgressBar Progress="0.7"
+                                     HeightRequest="50"
+                                     WidthRequest="60"
+                                     ProgressColor="#B2E22B"
+                                     BackgroundColor="#EAEAEA"/>
+                    </VerticalStackLayout>
+
+                </Border>
+
+
+                <Grid ColumnDefinitions="120,*">
+
+
+                    <Image Source="giraf.png"
+                           HeightRequest="320"
+                           VerticalOptions="End"/>
+
+
+                    <VerticalStackLayout
+                        Margin="0 0 0 13"
+                        Grid.Column="1"
+                        Spacing="15"
+                        VerticalOptions="Center">
+
+                        <Label Text="Изучаем"
+                               FontSize="48"
+                               HorizontalTextAlignment="Start"
+                               FontFamily="Finlandica"/>
+
+                        <Label Text="английский"
+                               FontSize="48"
+                               HorizontalTextAlignment="Center"
+                               FontFamily="Finlandica"/>
+
+                        <Label Text="ВМЕСТЕ"
+                               FontSize="48"
+                               TextColor="#40C95A"
+                               HorizontalTextAlignment="Center"
+                               FontFamily="Finlandica"/>
+
+                        <Button Text="START"
+                                FontSize="55"
+                                FontAttributes="Bold"
+                                TextColor="#F6FFD9"
+                                BackgroundColor="#45EA63"
+                                CornerRadius="35"
+                                HeightRequest="90"
+                                WidthRequest="250"
+                                HorizontalOptions="Center"
+                                FontFamily="Finlandica"/>
+                    </VerticalStackLayout>
+
+                </Grid>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

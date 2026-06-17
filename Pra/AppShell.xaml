@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Pra.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Pra"
+    Title="Pra" 
+    
+    Shell.TabBarBackgroundColor="#43C85A"
+    Shell.TabBarForegroundColor="White"
+    Shell.TabBarTitleColor="White"
+    Shell.TabBarUnselectedColor="#D8F5DD"
+    
+    >
+
+    
+    <TabBar>
+        <ShellContent
+          
+            Icon="avatar.png"
+            ContentTemplate="{DataTemplate local:Profile}" />
+
+        <ShellContent
+           
+            Icon="static.png"
+            ContentTemplate="{DataTemplate local:Stats}" />
+
+        <ShellContent
+            
+            Icon="main.png"
+            ContentTemplate="{DataTemplate local:MainPage}" />
+        
+        <ShellContent
+            Icon="knigi.png"
+            ContentTemplate="{DataTemplate local:Slovar}" />
+
+        <ShellContent
+           
+            Icon="povtor.png"
+            ContentTemplate="{DataTemplate local:Slovar}" />
+    </TabBar>
+
+</Shell>
