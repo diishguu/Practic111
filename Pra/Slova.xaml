@@ -29,8 +29,8 @@
 
         <VerticalStackLayout Grid.Row="1"
                              Padding="20"
-                             Spacing="25"
-                             VerticalOptions="Center"
+                             Spacing="15"
+                             VerticalOptions="Start"
                              >
 
             <Label x:Name="ProgressLabel"
@@ -134,6 +134,7 @@
             </Grid>
 
         </VerticalStackLayout>
+        
 
 
         <Border Grid.Row="2"

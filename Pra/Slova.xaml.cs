@@ -1,17 +1,19 @@
 namespace Pra;
 
+using System.Collections.ObjectModel;
 using static WordItem;
 
 public partial class Slova : ContentPage
 {
+    private ObservableCollection<WordItem> words;
+
     private int currentIndex = 0;
-    private List<WordItem> words;
 
     public Slova()
 	{
 		InitializeComponent();
 
-        words = Slovar.AllWords.ToList();
+        words = Slovar.Words;
 
         LoadWord();
     }

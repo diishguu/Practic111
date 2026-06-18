@@ -3,36 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|c:\\users\\vasileva-lp\\source\\repos\\pra\\pra\\pronuciation.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|solutionrelative:pra\\pronuciation.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|c:\\users\\vasileva-lp\\source\\repos\\pra\\pra\\slova.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|solutionrelative:pra\\slova.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|c:\\users\\vasileva-lp\\source\\repos\\pra\\pra\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|solutionrelative:pra\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|c:\\users\\vasileva-lp\\source\\repos\\pra\\pra\\slovar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|solutionrelative:pra\\slovar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|c:\\users\\vasileva-lp\\source\\repos\\pra\\pra\\pronitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|solutionrelative:pra\\pronitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|c:\\users\\vasileva-lp\\source\\repos\\pra\\pra\\pronuciation.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|solutionrelative:pra\\pronuciation.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|c:\\users\\vasileva-lp\\source\\repos\\pra\\pra\\rules.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|solutionrelative:pra\\rules.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|c:\\users\\vasileva-lp\\source\\repos\\pra\\pra\\grammarrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|solutionrelative:pra\\grammarrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|c:\\users\\vasileva-lp\\source\\repos\\pra\\pra\\rules.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|solutionrelative:pra\\rules.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|c:\\users\\vasileva-lp\\source\\repos\\pra\\pra\\worditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|solutionrelative:pra\\worditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|c:\\users\\vasileva-lp\\source\\repos\\pra\\pra\\slova.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|solutionrelative:pra\\slova.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{48B51EA4-903D-99E0-5323-497E06022302}|Pra\\Pra.csproj|c:\\users\\vasileva-lp\\source\\repos\\pra\\pra\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -46,121 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "Pra\\MainPage.xaml.cs",
-              "ToolTip": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\MainPage.xaml.cs",
-              "RelativeToolTip": "Pra\\MainPage.xaml.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwB8AAAAJAAAAAAAAAA==",
+              "Title": "Slovar.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\Slovar.xaml.cs",
+              "RelativeDocumentMoniker": "Pra\\Slovar.xaml.cs",
+              "ToolTip": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\Slovar.xaml.cs",
+              "RelativeToolTip": "Pra\\Slovar.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-17T08:43:46.691Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PronItem.cs",
-              "DocumentMoniker": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\PronItem.cs",
-              "RelativeDocumentMoniker": "Pra\\PronItem.cs",
-              "ToolTip": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\PronItem.cs",
-              "RelativeToolTip": "Pra\\PronItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T03:54:00.066Z",
+              "WhenOpened": "2026-06-18T04:24:01.21Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Pronuciation.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\Pronuciation.xaml.cs",
-              "RelativeDocumentMoniker": "Pra\\Pronuciation.xaml.cs",
-              "ToolTip": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\Pronuciation.xaml.cs",
-              "RelativeToolTip": "Pra\\Pronuciation.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Title": "Slova.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\Slova.xaml.cs",
+              "RelativeDocumentMoniker": "Pra\\Slova.xaml.cs",
+              "ToolTip": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\Slova.xaml.cs",
+              "RelativeToolTip": "Pra\\Slova.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T03:51:57.39Z",
+              "WhenOpened": "2026-06-18T04:23:24.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Slova.xaml",
+              "DocumentMoniker": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\Slova.xaml",
+              "RelativeDocumentMoniker": "Pra\\Slova.xaml",
+              "ToolTip": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\Slova.xaml",
+              "RelativeToolTip": "Pra\\Slova.xaml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-18T04:19:55.214Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Pronuciation.xaml",
-              "DocumentMoniker": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\Pronuciation.xaml",
-              "RelativeDocumentMoniker": "Pra\\Pronuciation.xaml",
-              "ToolTip": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\Pronuciation.xaml",
-              "RelativeToolTip": "Pra\\Pronuciation.xaml",
-              "ViewState": "AgIAALcAAAAAAAAAAAAkwMIAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-06-18T03:51:44.011Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GrammarRule.cs",
-              "DocumentMoniker": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\GrammarRule.cs",
-              "RelativeDocumentMoniker": "Pra\\GrammarRule.cs",
-              "ToolTip": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\GrammarRule.cs",
-              "RelativeToolTip": "Pra\\GrammarRule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T03:12:42.904Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Rules.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\Rules.xaml.cs",
-              "RelativeDocumentMoniker": "Pra\\Rules.xaml.cs",
-              "ToolTip": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\Rules.xaml.cs",
-              "RelativeToolTip": "Pra\\Rules.xaml.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAUwEwAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T03:11:58.415Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Rules.xaml",
-              "DocumentMoniker": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\Rules.xaml",
-              "RelativeDocumentMoniker": "Pra\\Rules.xaml",
-              "ToolTip": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\Rules.xaml",
-              "RelativeToolTip": "Pra\\Rules.xaml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-06-18T03:11:57.594Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "WordItem.cs",
-              "DocumentMoniker": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\WordItem.cs",
-              "RelativeDocumentMoniker": "Pra\\WordItem.cs",
-              "ToolTip": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\WordItem.cs",
-              "RelativeToolTip": "Pra\\WordItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T02:29:55.177Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\MainPage.xaml",
               "RelativeDocumentMoniker": "Pra\\MainPage.xaml",
               "ToolTip": "C:\\Users\\vasileva-lp\\source\\repos\\Pra\\Pra\\MainPage.xaml",
               "RelativeToolTip": "Pra\\MainPage.xaml",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAAAJQAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAANsAAAAAAAAAAAAAAOEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-06-17T08:43:19.753Z"
+              "WhenOpened": "2026-06-18T04:04:03.548Z",
+              "EditorCaption": ""
             }
           ]
         }

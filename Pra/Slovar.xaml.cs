@@ -7,7 +7,6 @@ public partial class Slovar : ContentPage
 {
     public static ObservableCollection<WordItem> Words { get; set; } = new();
 
-    public static ObservableCollection<WordItem> AllWords { get; set; } = new();
 
     public ObservableCollection<WordItem> FilteredWords { get; set; } = new();
 
@@ -90,12 +89,11 @@ public partial class Slovar : ContentPage
 
         FilteredWords.Clear();
 
-        var result = AllWords.Where(w =>
-            w.Word.ToLower().Contains(searchText) ||
-            w.Translation.ToLower().Contains(searchText));
+        var result = Words.Where(w =>
+    w.Word.ToLower().Contains(searchText) ||
+    w.Translation.ToLower().Contains(searchText));
 
-        foreach (var word in result)
-            FilteredWords.Add(word);
+        WordsCollection.ItemsSource = result;
     }
 
     private async void OnUrokTapped(object sender, EventArgs e)

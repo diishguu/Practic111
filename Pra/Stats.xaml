@@ -3,10 +3,351 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pra.Stats"
              Title="Stats">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <Grid Grid.Row="0"
+              BackgroundColor="#40C95A"
+              HeightRequest="90"
+              Padding="20,15">
+
+            <Image Source="logo.png"
+                   HeightRequest="50"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center" />
+
+            <Label Text="Статистика"
+                   TextColor="White"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   FontFamily="Finlandica"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+        </Grid>
+
+        <ScrollView Grid.Row="1">
+
+            <VerticalStackLayout Padding="20"
+                                 Spacing="25">
+
+                <Border Padding="18"
+                        BackgroundColor="#DFF7D8"
+                        StrokeThickness="0">
+
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="28"/>
+                    </Border.StrokeShape>
+
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                                Opacity="0.08"
+                                Radius="18"
+                                Offset="0,6"/>
+                    </Border.Shadow>
+
+                    <Grid ColumnDefinitions="Auto,*">
+
+                        <Label Text="🔥"
+                               FontSize="34"
+                               VerticalOptions="Center"/>
+
+                        <VerticalStackLayout Grid.Column="1"
+                                             Spacing="2"
+                                             Margin="14,0,0,0">
+
+                            <Label Text="7 дней подряд"
+                                   FontSize="20"
+                                   FontFamily="Finlandica"
+                                   FontAttributes="Bold"
+                                   TextColor="#1F2937"/>
+
+                            <Label Text="Так держать!"
+                                   FontSize="16"
+                                   FontFamily="Finlandica"
+                                   TextColor="#1F2937"/>
+                        </VerticalStackLayout>
+
+                    </Grid>
+                </Border>
+
+                <Grid ColumnDefinitions="*,*"
+                      ColumnSpacing="12">
+
+                    <Border Padding="16"
+                            BackgroundColor="White"
+                            StrokeThickness="0">
+
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="24"/>
+                        </Border.StrokeShape>
+
+                        <Border.Shadow>
+                            <Shadow Brush="Black"
+                                    Opacity="0.08"
+                                    Radius="18"
+                                    Offset="0,6"/>
+                        </Border.Shadow>
+
+                        <VerticalStackLayout Spacing="4">
+
+                            <Label Text="342"
+                                   FontSize="30"
+                                   FontAttributes="Bold"
+                                   TextColor="#1F2937"/>
+
+                            <Label Text="Изучено слов"
+                                   FontSize="13"
+                                   TextColor="#40C95A"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+
+                    <Border Grid.Column="1"
+                            Padding="16"
+                            BackgroundColor="White"
+                            StrokeThickness="0">
+
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="24"/>
+                        </Border.StrokeShape>
+
+                        <Border.Shadow>
+                            <Shadow Brush="Black"
+                                    Opacity="0.08"
+                                    Radius="18"
+                                    Offset="0,6"/>
+                        </Border.Shadow>
+
+                        <VerticalStackLayout Spacing="4">
+
+                            <Label Text="87%"
+                                   FontSize="30"
+                                   FontAttributes="Bold"
+                                   TextColor="#1F2937"/>
+
+                            <Label Text="Пройдено"
+                                   FontSize="13"
+                                   TextColor="#40C95A"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                </Grid>
+
+                <Border Padding="16"
+                        BackgroundColor="White"
+                        StrokeThickness="0">
+
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="28"/>
+                    </Border.StrokeShape>
+
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                                Opacity="0.08"
+                                Radius="18"
+                                Offset="0,6"/>
+                    </Border.Shadow>
+
+                    <VerticalStackLayout Spacing="14">
+
+                        <Label Text="Активность за неделю"
+                               FontSize="18"
+                               FontFamily="Finlandica"
+                               FontAttributes="Bold"
+                               TextColor="#1F2937"/>
+
+                        <Grid HeightRequest="120"
+                              ColumnDefinitions="*,*,*,*,*,*,*"
+                              ColumnSpacing="8">
+
+                            <Border Grid.Column="0"
+                                    BackgroundColor="#40C95A"
+                                    HeightRequest="40"
+                                    VerticalOptions="End"
+                                    StrokeThickness="0">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="6"/>
+                                </Border.StrokeShape>
+                            </Border>
+
+                            <Border Grid.Column="1"
+                                    BackgroundColor="#40C95A"
+                                    HeightRequest="70"
+                                    VerticalOptions="End"
+                                    StrokeThickness="0">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="6"/>
+                                </Border.StrokeShape>
+                            </Border>
+
+                            <Border Grid.Column="2"
+                                    BackgroundColor="#40C95A"
+                                    HeightRequest="50"
+                                    VerticalOptions="End"
+                                    StrokeThickness="0">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="6"/>
+                                </Border.StrokeShape>
+                            </Border>
+
+                            <Border Grid.Column="3"
+                                    BackgroundColor="#40C95A"
+                                    HeightRequest="90"
+                                    VerticalOptions="End"
+                                    StrokeThickness="0">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="6"/>
+                                </Border.StrokeShape>
+                            </Border>
+
+                            <Border Grid.Column="4"
+                                    BackgroundColor="#40C95A"
+                                    HeightRequest="60"
+                                    VerticalOptions="End"
+                                    StrokeThickness="0">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="6"/>
+                                </Border.StrokeShape>
+                            </Border>
+
+                            <Border Grid.Column="5"
+                                    BackgroundColor="#40C95A"
+                                    HeightRequest="80"
+                                    VerticalOptions="End"
+                                    StrokeThickness="0">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="6"/>
+                                </Border.StrokeShape>
+                            </Border>
+
+                            <Border Grid.Column="6"
+                                    BackgroundColor="#40C95A"
+                                    HeightRequest="30"
+                                    VerticalOptions="End"
+                                    StrokeThickness="0">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="6"/>
+                                </Border.StrokeShape>
+                            </Border>
+
+                        </Grid>
+
+                      
+                        <Grid ColumnDefinitions="*,*,*,*,*,*,*"
+                              ColumnSpacing="8">
+
+                            <Label Text="Пн" HorizontalOptions="Center" TextColor="#1F2937"/>
+                            <Label Grid.Column="1" Text="Вт" HorizontalOptions="Center" TextColor="#1F2937"/>
+                            <Label Grid.Column="2" Text="Ср" HorizontalOptions="Center" TextColor="#1F2937"/>
+                            <Label Grid.Column="3" Text="Чт" HorizontalOptions="Center" TextColor="#1F2937"/>
+                            <Label Grid.Column="4" Text="Пт" HorizontalOptions="Center" TextColor="#1F2937"/>
+                            <Label Grid.Column="5" Text="Сб" HorizontalOptions="Center" TextColor="#1F2937"/>
+                            <Label Grid.Column="6" Text="Вс" HorizontalOptions="Center" TextColor="#1F2937"/>
+
+                        </Grid>
+
+                    </VerticalStackLayout>
+                </Border>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Border Grid.Row="2"
+        BackgroundColor="#40C95A"
+        StrokeThickness="0"
+        Padding="10,15">
+
+            <Border.Shadow>
+                <Shadow Brush="Black"
+                Opacity="0.08"
+                Radius="10"
+                Offset="0,-2" />
+            </Border.Shadow>
+
+            <Grid ColumnDefinitions="*,*,*,*,*">
+
+                <VerticalStackLayout Grid.Column="0"
+                             Spacing="4"
+                             HorizontalOptions="Center">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnUrokTapped" />
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="Уроки"
+                   FontSize="16"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="1"
+                             Spacing="4"
+                             HorizontalOptions="Center">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnProfileTapped" />
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="Профиль"
+                   FontSize="16"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center" />
+
+                </VerticalStackLayout>
+
+
+                <VerticalStackLayout Grid.Column="2"
+                             Spacing="4"
+                             HorizontalOptions="Center">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnStaticTapped" />
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="Статистика"
+                   FontSize="16"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center" />
+
+                </VerticalStackLayout>
+
+
+                <VerticalStackLayout Grid.Column="3"
+                             Spacing="4"
+                             HorizontalOptions="Center">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSlovarTapped" />
+                    </VerticalStackLayout.GestureRecognizers>
+
+
+                    <Label Text="Словарь"
+                   FontSize="16"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center" />
+
+                </VerticalStackLayout>
+
+
+
+                <VerticalStackLayout Grid.Column="4"
+                             Spacing="4"
+                             HorizontalOptions="Center">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnDostigTapped" />
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="Достижения"
+                   FontSize="16"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center" />
+
+                </VerticalStackLayout>
+
+            </Grid>
+
+        </Border>
+
+    </Grid>
 </ContentPage>

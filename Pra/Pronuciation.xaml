@@ -5,7 +5,7 @@
              Title="Pronuciation">
     <Grid RowDefinitions="Auto,*,Auto">
 
-        <!-- Шапка -->
+       
 
         <Grid Grid.Row="0"
               BackgroundColor="#40C95A"
@@ -26,8 +26,7 @@
                    VerticalOptions="Center"/>
         </Grid>
 
-        <!-- Контент -->
-
+       
         <VerticalStackLayout Grid.Row="1"
                              Padding="20"
                              Spacing="25"
@@ -131,8 +130,6 @@
             </Grid>
 
         </VerticalStackLayout>
-
-        <!-- Нижнее меню -->
 
         <Border Grid.Row="2"
                 BackgroundColor="#40C95A"
