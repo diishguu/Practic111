@@ -90,7 +90,8 @@
 
                         <VerticalStackLayout Spacing="4">
 
-                            <Label Text="342"
+                            <Label x:Name="WordsLearnedLabel"
+                                   Text="0"
                                    FontSize="30"
                                    FontAttributes="Bold"
                                    TextColor="#1F2937"/>
@@ -120,12 +121,13 @@
 
                         <VerticalStackLayout Spacing="4">
 
-                            <Label Text="87%"
+                            <Label x:Name="AccuracyLabel"
+                                   Text="0%"
                                    FontSize="30"
                                    FontAttributes="Bold"
                                    TextColor="#1F2937"/>
 
-                            <Label Text="Пройдено"
+                            <Label Text="Верных ответов"
                                    FontSize="13"
                                    TextColor="#40C95A"/>
                         </VerticalStackLayout>
