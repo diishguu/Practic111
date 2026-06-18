@@ -5,6 +5,31 @@
              x:Class="Pra.App">
     <Application.Resources>
         <ResourceDictionary>
+           
+            <Style x:Key="LightTheme" TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="#F3F4F6"/>
+            </Style>
+
+            <Style x:Key="DarkTheme" TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="#1F2937"/>
+            </Style>
+            
+            <Color x:Key="BackgroundColor">#F3F4F6</Color>
+            <Color x:Key="CardBackgroundColor">#FFFFFF</Color>
+            <Color x:Key="TextColor">#1F2937</Color>
+            <Color x:Key="SecondaryTextColor">#6B7280</Color>
+            <Color x:Key="BorderColor">#E5E7EB</Color>
+
+            <Color x:Key="DarkBackgroundColor">#1F2937</Color>
+            <Color x:Key="DarkCardBackgroundColor">#374151</Color>
+            <Color x:Key="DarkTextColor">#F9FAFB</Color>
+            <Color x:Key="DarkSecondaryTextColor">#9CA3AF</Color>
+            <Color x:Key="DarkBorderColor">#4B5563</Color>
+            
+            <Color x:Key="DynamicBackgroundColor">#F3F4F6</Color>
+            <Color x:Key="DynamicCardBackgroundColor">#FFFFFF</Color>
+            <Color x:Key="DynamicTextColor">#1F2937</Color>
+
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />

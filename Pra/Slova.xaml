@@ -134,75 +134,100 @@
             </Grid>
 
         </VerticalStackLayout>
-        
+
 
 
         <Border Grid.Row="2"
-                BackgroundColor="#40C95A"
-                StrokeThickness="0"
-                Padding="10,15"
-                >
+        BackgroundColor="#40C95A"
+        StrokeThickness="0"
+        Padding="10,15">
+
+            <Border.Shadow>
+                <Shadow Brush="Black"
+                Opacity="0.08"
+                Radius="10"
+                Offset="0,-2" />
+            </Border.Shadow>
 
             <Grid ColumnDefinitions="*,*,*,*,*">
 
                 <VerticalStackLayout Grid.Column="0"
-                                     HorizontalOptions="Center">
+                             Spacing="4"
+                             HorizontalOptions="Center">
 
                     <VerticalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnUrokTapped"/>
+                        <TapGestureRecognizer Tapped="OnUrokTapped" />
                     </VerticalStackLayout.GestureRecognizers>
 
                     <Label Text="Уроки"
-                           FontSize="14"
-                           TextColor="#DFFFD6"/>
+                   FontSize="16"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center" />
                 </VerticalStackLayout>
 
                 <VerticalStackLayout Grid.Column="1"
-                                     HorizontalOptions="Center">
+                             Spacing="4"
+                             HorizontalOptions="Center">
 
                     <VerticalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnProfileTapped"/>
+                        <TapGestureRecognizer Tapped="OnProfileTapped" />
                     </VerticalStackLayout.GestureRecognizers>
 
                     <Label Text="Профиль"
-                           FontSize="14"
-                           TextColor="White"/>
+                   FontSize="16"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center" />
+
                 </VerticalStackLayout>
 
+
                 <VerticalStackLayout Grid.Column="2"
-                                     HorizontalOptions="Center">
+                             Spacing="4"
+                             HorizontalOptions="Center">
 
                     <VerticalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnStaticTapped"/>
+                        <TapGestureRecognizer Tapped="OnStaticTapped" />
                     </VerticalStackLayout.GestureRecognizers>
 
                     <Label Text="Статистика"
-                           FontSize="14"
-                           TextColor="White"/>
+                   FontSize="16"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center" />
+
                 </VerticalStackLayout>
+
 
                 <VerticalStackLayout Grid.Column="3"
-                                     HorizontalOptions="Center">
+                             Spacing="4"
+                             HorizontalOptions="Center">
 
                     <VerticalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnSlovarTapped"/>
+                        <TapGestureRecognizer Tapped="OnSlovarTapped" />
                     </VerticalStackLayout.GestureRecognizers>
 
+
                     <Label Text="Словарь"
-                           FontSize="14"
-                           TextColor="White"/>
+                   FontSize="16"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center" />
+
                 </VerticalStackLayout>
 
+
+
                 <VerticalStackLayout Grid.Column="4"
-                                     HorizontalOptions="Center">
+                             Spacing="4"
+                             HorizontalOptions="Center">
 
                     <VerticalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnDostigTapped"/>
+                        <TapGestureRecognizer Tapped="OnDostigTapped" />
                     </VerticalStackLayout.GestureRecognizers>
 
                     <Label Text="Достижения"
-                           FontSize="14"
-                           TextColor="White"/>
+                   FontSize="16"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center" />
+
                 </VerticalStackLayout>
 
             </Grid>
