@@ -3,10 +3,208 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pra.Pronuciation"
              Title="Pronuciation">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <!-- Шапка -->
+
+        <Grid Grid.Row="0"
+              BackgroundColor="#40C95A"
+              HeightRequest="90"
+              Padding="20,15">
+
+            <Image Source="logo.png"
+                   HeightRequest="50"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"/>
+
+            <Label Text="Произношение"
+                   TextColor="White"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   FontFamily="Finlandica"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+        </Grid>
+
+        <!-- Контент -->
+
+        <VerticalStackLayout Grid.Row="1"
+                             Padding="20"
+                             Spacing="25"
+                             VerticalOptions="Center">
+
+            <Label x:Name="ProgressLabel"
+                   FontSize="18"
+                   TextColor="#6B7280"
+                   HorizontalOptions="Center"/>
+
+            <ProgressBar x:Name="PronunciationProgressBar"
+                         HeightRequest="10"
+                         ProgressColor="#40C95A"
+                         BackgroundColor="#D9EFD5"/>
+
+            <Border Padding="30"
+                    StrokeThickness="0">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="30"/>
+                </Border.StrokeShape>
+
+                <Border.Shadow>
+                    <Shadow Brush="Black"
+                            Opacity="0.08"
+                            Radius="12"
+                            Offset="0,4"/>
+                </Border.Shadow>
+
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0"
+                                         EndPoint="1,1">
+                        <GradientStop Color="#C7F7AE"
+                                      Offset="0"/>
+
+                        <GradientStop Color="#B9EA3E"
+                                      Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <VerticalStackLayout Spacing="25"
+                                     VerticalOptions="Center">
+
+                    <Label x:Name="SoundLabel"
+                           FontSize="48"
+                           FontAttributes="Bold"
+                           TextColor="#1F2937"
+                           HorizontalTextAlignment="Center"
+                           FontFamily="Finlandica"/>
+
+                    <Button Text="🔊 Прослушать"
+                            HeightRequest="55"
+                            CornerRadius="28"
+                            BackgroundColor="#40C95A"
+                            TextColor="White"
+                            FontSize="20"
+                            Clicked="OnPlayClicked"/>
+
+                    <Label x:Name="DescriptionLabel"
+                           FontSize="18"
+                           TextColor="#355E3B"
+                           HorizontalTextAlignment="Center"/>
+
+                    <Border BackgroundColor="White"
+                            Padding="15"
+                            StrokeThickness="0">
+
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20"/>
+                        </Border.StrokeShape>
+
+                        <Label x:Name="ExampleLabel"
+                               FontSize="20"
+                               FontAttributes="Italic"
+                               TextColor="#1F2937"
+                               HorizontalTextAlignment="Center"/>
+                    </Border>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <Grid ColumnDefinitions="*,20,*">
+
+                <Button Grid.Column="0"
+                        Text="← Назад"
+                        HeightRequest="55"
+                        CornerRadius="28"
+                        BackgroundColor="#E5E7EB"
+                        TextColor="#1F2937"
+                        Clicked="OnPreviousClicked"/>
+
+                <Button Grid.Column="2"
+                        Text="Далее →"
+                        HeightRequest="55"
+                        CornerRadius="28"
+                        BackgroundColor="#40C95A"
+                        TextColor="White"
+                        Clicked="OnNextClicked"/>
+
+            </Grid>
+
+        </VerticalStackLayout>
+
+        <!-- Нижнее меню -->
+
+        <Border Grid.Row="2"
+                BackgroundColor="#40C95A"
+                StrokeThickness="0"
+                Padding="10,15">
+
+            <Grid ColumnDefinitions="*,*,*,*,*">
+
+                <VerticalStackLayout Grid.Column="0"
+                                     HorizontalOptions="Center">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnUrokTapped"/>
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="Уроки"
+                           FontSize="14"
+                           TextColor="#DFFFD6"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="1"
+                                     HorizontalOptions="Center">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnProfileTapped"/>
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="Профиль"
+                           FontSize="14"
+                           TextColor="White"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="2"
+                                     HorizontalOptions="Center">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnStaticTapped"/>
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="Статистика"
+                           FontSize="14"
+                           TextColor="White"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="3"
+                                     HorizontalOptions="Center">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSlovarTapped"/>
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="Словарь"
+                           FontSize="14"
+                           TextColor="White"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="4"
+                                     HorizontalOptions="Center">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnDostigTapped"/>
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="Достижения"
+                           FontSize="14"
+                           TextColor="White"/>
+                </VerticalStackLayout>
+
+            </Grid>
+
+        </Border>
+
+    </Grid>
+
 </ContentPage>
