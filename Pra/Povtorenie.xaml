@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pra.Povtorenie"
+             Title="Повторение"
+             BackgroundColor="#F5F7F8"
+             >
+    <Grid RowDefinitions="Auto, *, Auto">
+        <!--шапка-->
+        <Grid Grid.Row="0"
+              BackgroundColor="#40C95A"
+              HeightRequest="90"
+              Padding="20,15">
+            <Image Source="logo.png"
+                   HeightRequest="50"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"/>
+            <Label Text="Повторение"
+                   TextColor="White"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   FontFamily="Finlandica"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+        </Grid>
+        <!--контент-->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="20">
+            <VerticalStackLayout x:Name="ProgressPanel"
+                                 Spacing="8">
+                <Grid ColumnDefinitions="*, Auto">
+                    <Label x:Name="ProgressLabel"
+                           Text="Карточка 1 / 1"
+                           FontSize="16"
+                           FontFamily="Finlandica"
+                           TextColor="#1F2937"
+                           VerticalOptions="Center"/>
+                    <Label x:Name="ScoreLabel"
+                           Grid.Column="1"
+                           Text="✅ 0    🔁 0"
+                           FontSize="16"
+                           TextColor="#40C95A"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"/>
+                </Grid>
+                <ProgressBar x:Name="SessionProgress"
+                             Progress="0"
+                             HeightRequest="8"
+                             ProgressColor="#40C95A"
+                             BackgroundColor="#D9EFD5"/>
+            </VerticalStackLayout>
+            <!--карточка со словом-->
+            <Border x:Name="CardBorder"
+                    Padding="24"
+                    BackgroundColor="White"
+                    StrokeThickness="0"
+                    MinimumHeightRequest="260">
+                <Border.Shadow>
+                    <Shadow Brush="Black"
+                            Opacity="0.08"
+                            Radius="18"
+                            Offset="0,6"/>
+                </Border.Shadow>
+
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnShowAnswerClicked"/>
+                </Border.GestureRecognizers>
+
+                <VerticalStackLayout Spacing="14" VerticalOptions="Center">
+                    <Label Text="Слово"
+                           FontSize="14"
+                           TextColor="#9CA3AF"
+                           HorizontalOptions="Center"/>
+                    <Label x:Name="WordLabel"
+                           Text="-"
+                           FontSize="40"
+                           FontAttributes="Bold"
+                           FontFamily="Finlandica"
+                           TextColor="#1F2937"
+                           HorizontalTextAlignment="Center"/>
+                    
+                    <!--панель ответа-->
+                    <VerticalStackLayout x:Name="AnswerPanel"
+                                         Spacing="8"
+                                         IsVisible="False">
+                        <BoxView HeightRequest="1"
+                                 Color="#E5E7EB"
+                                 Margin="0,6"/>
+                        <Label x:Name="TranscriptionLabel"
+                               Text=""
+                               FontSize="18"
+                               FontAttributes="Italic"
+                               TextColor="#9CA3AF"
+                               HorizontalTextAlignment="Center"/>
+                        <Label x:Name="TranslationLabel"
+                               Text=""
+                               FontSize="28"
+                               FontAttributes="Bold"
+                               FontFamily="Finlandica"
+                               TextColor="#40C95A"
+                               HorizontalTextAlignment="Center"/>
+                        <Label x:Name="ExampleLabel"
+                               Text=""
+                               FontSize="15"
+                               TextColor="#40C95A"
+                               HorizontalTextAlignment="Center"/>
+                    </VerticalStackLayout>
+                    <Label x:Name="HintLabel"
+                           Text="Нажми на карточку, чтобы увидеть перевод"
+                           FontSize="13"
+                           TextColor="#9CA3AF"
+                           HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Border>
+            <!--кнопка показа перевода-->
+            <Button x:Name="ShowAnswerButton"
+                    Text="Показать перевод"
+                    HeightRequest="56"
+                    CornerRadius="28"
+                    BackgroundColor="#40C95A"
+                    TextColor="White"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    FontFamily="Finlandica"
+                    Clicked="ShowAnswerButton_Clicked"/>
+            <!--знаю не знаю-->
+            <Grid x:Name="KnowOrDont"
+                  ColumnDefinitions="*,*"
+                  ColumnSpacing="12"
+                  IsVisible="False">
+                <Button Grid.Column="0"
+                        Text="Не знаю"
+                        HeightRequest="56"
+                        CornerRadius="28"
+                        BackgroundColor="#FEE2E2"
+                        TextColor="#EF4444"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        FontFamily="Finlandica"
+                        Clicked="OnDontKnowClicked"/>
+                <Button Grid.Column="1"
+                        Text="Знаю"
+                        HeightRequest="56"
+                        CornerRadius="28"
+                        BackgroundColor="#40C95A"
+                        TextColor="White"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        FontFamily="Finlandica"
+                        Clicked="OnKnowClicked"/>
+            </Grid>
+            <!--итоги-->
+            <Border x:Name="SummaryPanel"
+                    Padding="24"
+                    BackgroundColor="White"
+                    StrokeThickness="0"
+                    IsVisible="False">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="28"/>
+                </Border.StrokeShape>
+
+                <Border.Shadow>
+                    <Shadow Brush="Black"
+                            Opacity="0.08"
+                            Radius="18"
+                            Offset="0,6"/>
+                </Border.Shadow>
+
+                <VerticalStackLayout Spacing="14" HorizontalOptions="Center">
+                    <Label Text="🎉"
+                           FontSize="48"
+                           HorizontalOptions="Center"/>
+                    <Label Text="Повторение завершено!"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           FontFamily="Finlandica"
+                           TextColor="#1F2937"
+                           HorizontalTextAlignment="Center"/>
+                    <Label x:Name="SummaryLabel"
+                           Text=""
+                           FontSize="18"
+                           TextColor="#6B7280"
+                           HorizontalTextAlignment="Center"/>
+                    <Button Text="Начать заново"
+                            HeightRequest="56"
+                            CornerRadius="28"
+                            BackgroundColor="#40C95A"
+                            TextColor="White"
+                            FontSize="18"
+                            FontAttributes="Bold"
+                            FontFamily="Finlandica"
+                            Clicked="OnRestartClicked"/>
+                </VerticalStackLayout>
+            </Border>
+            </VerticalStackLayout>
+        </ScrollView>
+        <!--меню-->
+        <Border Grid.Row="2"
+                BackgroundColor="#40C95A"
+                StrokeThickness="0"
+                Padding="10,15">
+            <Border.Shadow>
+                <Shadow Brush="Black"
+                        Opacity="0.08"
+                        Radius="10"
+                        Offset="0,-2"/>
+            </Border.Shadow>
+            <Grid ColumnDefinitions="*,*,*,*,*">
+                <VerticalStackLayout Grid.Column="0" 
+                                     Spacing="4"
+                                     HorizontalOptions="Center">
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnUrokTapped" />
+                    </VerticalStackLayout.GestureRecognizers>
+                    <Label Text="Уроки" 
+                           FontSize="16" 
+                           TextColor="White" 
+                           HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="1" 
+                                     Spacing="4" 
+                                     HorizontalOptions="Center">
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnProfileTapped" />
+                    </VerticalStackLayout.GestureRecognizers>
+                    <Label Text="Профиль" 
+                           FontSize="16" 
+                           TextColor="White" 
+                           HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="2" 
+                                     Spacing="4" 
+                                     HorizontalOptions="Center">
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnStaticTapped" />
+                    </VerticalStackLayout.GestureRecognizers>
+                    <Label Text="Статистика" 
+                           FontSize="16" 
+                           TextColor="White" 
+                           HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="3" 
+                                     Spacing="4" 
+                                     HorizontalOptions="Center">
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSlovarTapped" />
+                    </VerticalStackLayout.GestureRecognizers>
+                    <Label Text="Словарь" 
+                           FontSize="16" 
+                           TextColor="White" 
+                           HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="4" 
+                                     Spacing="4" 
+                                     HorizontalOptions="Center">
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnDostigTapped" />
+                    </VerticalStackLayout.GestureRecognizers>
+                    <Label Text="Достижения" 
+                           FontSize="16" 
+                           TextColor="White" 
+                           HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </Grid>
+        </Border>
+    </Grid>
+        
+</ContentPage>

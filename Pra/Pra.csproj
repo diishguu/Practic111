@@ -68,6 +68,9 @@
 	  <MauiXaml Update="NewPage2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Povtorenie.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Profile.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

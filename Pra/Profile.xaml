@@ -247,7 +247,7 @@
                         Offset="0,-2" />
             </Border.Shadow>
 
-            <Grid ColumnDefinitions="*,*,*,*,*">
+            <Grid ColumnDefinitions="*,*,*,*,*,*">
                 <VerticalStackLayout Grid.Column="0"
                                      Spacing="4"
                                      HorizontalOptions="Center">
@@ -307,6 +307,17 @@
                            TextColor="White"
                            HorizontalTextAlignment="Center" />
                 </VerticalStackLayout>
+                
+                <VerticalStackLayout Grid.Column="5" Spacing="4" HorizontalOptions="Center">
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPovtorTapped" />
+                    </VerticalStackLayout.GestureRecognizers>
+                    <Label Text="Повторение"
+                           FontSize="16"
+                           TextColor="White"
+                           HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+
             </Grid>
         </Border>
 

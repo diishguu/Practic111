@@ -206,4 +206,8 @@ public partial class Slova : ContentPage
     {
         await Navigation.PushAsync(new NewPage2());
     }
+    private async void OnPovtorTapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new Povtorenie());
+    }
 }
