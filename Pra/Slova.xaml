@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pra.Slova"
+             Title="Slova">
+    <Grid RowDefinitions="Auto,*,Auto"
+          >
+
+
+        <Grid Grid.Row="0"
+              BackgroundColor="#40C95A"
+              HeightRequest="90"
+              Padding="20,15">
+
+            <Image Source="logo.png"
+                   HeightRequest="50"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"/>
+
+            <Label Text="Учим слова"
+                   TextColor="White"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   FontFamily="Finlandica"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+        </Grid>
+
+
+        <VerticalStackLayout Grid.Row="1"
+                             Padding="20"
+                             Spacing="25"
+                             VerticalOptions="Center"
+                             >
+
+            <Label x:Name="ProgressLabel"
+                   Text="1 из 10"
+                   FontSize="18"
+                   TextColor="#6B7280"
+                   HorizontalOptions="Center"/>
+
+            <ProgressBar x:Name="LessonProgressBar"
+                         Progress="0.1"
+                         HeightRequest="10"
+                         ProgressColor="#40C95A"
+                         BackgroundColor="#D9EFD5"/>
+
+            <Border Padding="30"
+                    StrokeThickness="0"
+                    HeightRequest="360">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="30"/>
+                </Border.StrokeShape>
+
+                <Border.Shadow>
+                    <Shadow Brush="Black"
+                            Opacity="0.08"
+                            Radius="12"
+                            Offset="0,4"/>
+                </Border.Shadow>
+
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0"
+                                         EndPoint="1,1">
+                        <GradientStop Color="#C7F7AE" Offset="0"/>
+                        <GradientStop Color="#B9EA3E" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <VerticalStackLayout Spacing="20"
+                                     VerticalOptions="Center">
+
+                    <Label x:Name="WordLabel"
+                           Text="Apple"
+                           FontSize="42"
+                           FontFamily="Finlandica"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           TextColor="#1F2937"/>
+
+                    <Label x:Name="TranscriptionLabel"
+                           Text="[ˈæpl]"
+                           FontSize="22"
+                           TextColor="#355E3B"
+                           HorizontalTextAlignment="Center"/>
+
+                    <Label x:Name="TranslationLabel"
+                           IsVisible="False"
+                           Text="Яблоко"
+                           FontSize="28"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           TextColor="#1F2937"/>
+
+                    <Label x:Name="ExampleLabel"
+                           IsVisible="False"
+                           Text="I eat an apple every day."
+                           FontSize="18"
+                           HorizontalTextAlignment="Center"
+                           TextColor="#355E3B"/>
+
+                    <Button x:Name="ShowButton"
+                            Text="Показать перевод"
+                            HeightRequest="55"
+                            CornerRadius="28"
+                            BackgroundColor="#40C95A"
+                            TextColor="White"
+                            FontSize="20"
+                            Clicked="OnShowClicked"/>
+                </VerticalStackLayout>
+
+            </Border>
+
+            <Grid ColumnDefinitions="*,20,*" 
+                  >
+
+                <Button Grid.Column="0"
+                        Text="← Назад"
+                        CornerRadius="28"
+                        HeightRequest="55"
+                        BackgroundColor="#E5E7EB"
+                        TextColor="#1F2937"
+                        Clicked="OnPreviousClicked"/>
+
+                <Button Grid.Column="2"
+                        Text="Далее →"
+                        CornerRadius="28"
+                        HeightRequest="55"
+                        BackgroundColor="#40C95A"
+                        TextColor="White"
+                        Clicked="OnNextClicked"/>
+
+            </Grid>
+
+        </VerticalStackLayout>
+
+
+        <Border Grid.Row="2"
+                BackgroundColor="#40C95A"
+                StrokeThickness="0"
+                Padding="10,15"
+                >
+
+            <Grid ColumnDefinitions="*,*,*,*,*">
+
+                <VerticalStackLayout Grid.Column="0"
+                                     HorizontalOptions="Center">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnUrokTapped"/>
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="Уроки"
+                           FontSize="14"
+                           TextColor="#DFFFD6"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="1"
+                                     HorizontalOptions="Center">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnProfileTapped"/>
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="Профиль"
+                           FontSize="14"
+                           TextColor="White"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="2"
+                                     HorizontalOptions="Center">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnStaticTapped"/>
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="Статистика"
+                           FontSize="14"
+                           TextColor="White"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="3"
+                                     HorizontalOptions="Center">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSlovarTapped"/>
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="Словарь"
+                           FontSize="14"
+                           TextColor="White"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="4"
+                                     HorizontalOptions="Center">
+
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnDostigTapped"/>
+                    </VerticalStackLayout.GestureRecognizers>
+
+                    <Label Text="Достижения"
+                           FontSize="14"
+                           TextColor="White"/>
+                </VerticalStackLayout>
+
+            </Grid>
+
+        </Border>
+
+    </Grid>
+
+</ContentPage>
