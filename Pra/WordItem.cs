@@ -14,6 +14,6 @@ namespace Pra
 
         public string Example { get; set; }
 
-        public string Category { get; set; }
+        
     }
 }

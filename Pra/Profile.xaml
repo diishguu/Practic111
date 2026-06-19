@@ -146,30 +146,7 @@
                     </Border.Shadow>
 
                     <VerticalStackLayout Spacing="0">
-                       
-                       
-                        <Grid Padding="16"
-                              ColumnDefinitions="*,Auto">
-                            <Label Text="Изучаемый язык"
-                                   FontSize="16"
-                                   FontFamily="Finlandica"
-                                   TextColor="#1F2937"
-                                   VerticalOptions="Center"/>
-                            <Picker Grid.Column="1"
-                                    x:Name="LanguagePicker"
-                                    WidthRequest="150"
-                                    TextColor="#40C95A"
-                                    SelectedIndexChanged="OnLanguageChanged">
-                                <Picker.ItemsSource>
-                                    <x:Array Type="{x:Type x:String}">
-                                        <x:String>Английский</x:String>
-                                        <x:String>Немецкий</x:String>
-                                        <x:String>Французский</x:String>
-                                        <x:String>Испанский</x:String>
-                                    </x:Array>
-                                </Picker.ItemsSource>
-                            </Picker>
-                        </Grid>
+                      
 
                         <BoxView HeightRequest="1" Color="#E5E7EB"/>
 

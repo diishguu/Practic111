@@ -30,7 +30,7 @@ public partial class Slova : ContentPage
             Translation = "Яблоко",
             Transcription = "[ˈæpl]",
             Example = "I eat an apple every day.",
-            Category = "Еда"
+            
         });
 
         wordsList.Add(new WordItem
@@ -39,7 +39,7 @@ public partial class Slova : ContentPage
             Translation = "Аэропорт",
             Transcription = "[ˈeəpɔːt]",
             Example = "The airport is very busy.",
-            Category = "Путешествия"
+            
         });
 
         wordsList.Add(new WordItem
@@ -48,14 +48,14 @@ public partial class Slova : ContentPage
             Translation = "Книга",
             Transcription = "[bʊk]",
             Example = "I read a book every evening.",
-            Category = "Учеба"
+            
         }); wordsList.Add(new WordItem
         {
             Word = "Beautiful",
             Translation = "Красивый",
             Transcription = "[ˈbjuːtɪfl]",
             Example = "She has a beautiful smile.",
-            Category = "Прилагательные"
+            
         });
 
         wordsList.Add(new WordItem
@@ -64,7 +64,7 @@ public partial class Slova : ContentPage
             Translation = "Компьютер",
             Transcription = "[kəmˈpjuːtə]",
             Example = "I work on my computer every day.",
-            Category = "Техника"
+            
         });
 
         wordsList.Add(new WordItem
@@ -73,7 +73,7 @@ public partial class Slova : ContentPage
             Translation = "Вкусный",
             Transcription = "[dɪˈlɪʃəs]",
             Example = "This pizza is delicious!",
-            Category = "Еда"
+            
         });
 
         wordsList.Add(new WordItem
@@ -82,7 +82,7 @@ public partial class Slova : ContentPage
             Translation = "Опыт",
             Transcription = "[ɪkˈspɪəriəns]",
             Example = "I have experience in programming.",
-            Category = "Работа"
+            
         });
 
         wordsList.Add(new WordItem
@@ -91,7 +91,7 @@ public partial class Slova : ContentPage
             Translation = "Друг",
             Transcription = "[frend]",
             Example = "He is my best friend.",
-            Category = "Люди"
+            
         });
 
         wordsList.Add(new WordItem
@@ -100,7 +100,7 @@ public partial class Slova : ContentPage
             Translation = "Сад",
             Transcription = "[ˈɡɑːdn]",
             Example = "There are roses in the garden.",
-            Category = "Природа"
+           
         });
 
         wordsList.Add(new WordItem
@@ -109,7 +109,126 @@ public partial class Slova : ContentPage
             Translation = "Счастливый",
             Transcription = "[ˈhæpi]",
             Example = "I am happy to see you!",
-            Category = "Эмоции"
+            
+        });
+        wordsList.Add(new WordItem
+        {
+            Word = "Amazing",
+            Translation = "Удивительный",
+            Transcription = "[əˈmeɪzɪŋ]",
+            Example = "The view from the mountain is amazing."
+        });
+
+        wordsList.Add(new WordItem
+        {
+            Word = "Careful",
+            Translation = "Осторожный",
+            Transcription = "[ˈkeəfəl]",
+            Example = "Be careful when crossing the road."
+        });
+
+        wordsList.Add(new WordItem
+        {
+            Word = "Difficult",
+            Translation = "Сложный",
+            Transcription = "[ˈdɪfɪkəlt]",
+            Example = "This exercise is difficult."
+        });
+
+        wordsList.Add(new WordItem
+        {
+            Word = "Easy",
+            Translation = "Лёгкий",
+            Transcription = "[ˈiːzi]",
+            Example = "The test was easy."
+        });
+
+        wordsList.Add(new WordItem
+        {
+            Word = "Expensive",
+            Translation = "Дорогой",
+            Transcription = "[ɪkˈspensɪv]",
+            Example = "This watch is expensive."
+        });
+
+        wordsList.Add(new WordItem
+        {
+            Word = "Cheap",
+            Translation = "Дешёвый",
+            Transcription = "[tʃiːp]",
+            Example = "These shoes are cheap."
+        });
+
+        wordsList.Add(new WordItem
+        {
+            Word = "Fast",
+            Translation = "Быстрый",
+            Transcription = "[fɑːst]",
+            Example = "He drives a fast car."
+        });
+
+        wordsList.Add(new WordItem
+        {
+            Word = "Slow",
+            Translation = "Медленный",
+            Transcription = "[sləʊ]",
+            Example = "The internet connection is slow."
+        });
+
+        wordsList.Add(new WordItem
+        {
+            Word = "Strong",
+            Translation = "Сильный",
+            Transcription = "[strɒŋ]",
+            Example = "She is strong enough to carry the box."
+        });
+
+        wordsList.Add(new WordItem
+        {
+            Word = "Weak",
+            Translation = "Слабый",
+            Transcription = "[wiːk]",
+            Example = "He felt weak after the illness."
+        });
+
+        wordsList.Add(new WordItem
+        {
+            Word = "Friendly",
+            Translation = "Дружелюбный",
+            Transcription = "[ˈfrendli]",
+            Example = "Our neighbors are very friendly."
+        });
+
+        wordsList.Add(new WordItem
+        {
+            Word = "Busy",
+            Translation = "Занятый",
+            Transcription = "[ˈbɪzi]",
+            Example = "I am busy this afternoon."
+        });
+
+        wordsList.Add(new WordItem
+        {
+            Word = "Quiet",
+            Translation = "Тихий",
+            Transcription = "[ˈkwaɪət]",
+            Example = "The library is quiet."
+        });
+
+        wordsList.Add(new WordItem
+        {
+            Word = "Noisy",
+            Translation = "Шумный",
+            Transcription = "[ˈnɔɪzi]",
+            Example = "The street is noisy at night."
+        });
+
+        wordsList.Add(new WordItem
+        {
+            Word = "Healthy",
+            Translation = "Здоровый",
+            Transcription = "[ˈhelθi]",
+            Example = "Eating vegetables is healthy."
         });
 
 
