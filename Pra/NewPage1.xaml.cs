@@ -1,11 +1,23 @@
 namespace Pra;
 
+
 public partial class NewPage1 : ContentPage
 {
 	public NewPage1()
 	{
 		InitializeComponent();
-	}
+
+       
+    }
+   
+
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+
+ 
+    }
+
     private async void OnWordsTapped(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new Slova());

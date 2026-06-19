@@ -22,7 +22,7 @@ public partial class Slovar : ContentPage
                 Translation = "Яблоко",
                 Transcription = "[ˈæpl]",
                 Example = "I eat an apple every day.",
-                Category = "Еда"
+                
             });
 
             Words.Add(new WordItem
@@ -31,7 +31,86 @@ public partial class Slovar : ContentPage
                 Translation = "Аэропорт",
                 Transcription = "[ˈeəpɔːt]",
                 Example = "The airport is very busy.",
-                Category = "Путешествия"
+                
+            });
+            Words.Add(new WordItem
+            {
+                Word = "Book",
+                Translation = "Книга",
+                Transcription = "[bʊk]",
+                Example = "She is reading a book."
+            });
+
+            Words.Add(new WordItem
+            {
+                Word = "Car",
+                Translation = "Машина",
+                Transcription = "[kɑːr]",
+                Example = "My car is parked outside."
+            });
+
+            Words.Add(new WordItem
+            {
+                Word = "House",
+                Translation = "Дом",
+                Transcription = "[haʊs]",
+                Example = "They bought a new house."
+            });
+
+            Words.Add(new WordItem
+            {
+                Word = "School",
+                Translation = "Школа",
+                Transcription = "[skuːl]",
+                Example = "The children go to school every day."
+            });
+
+            Words.Add(new WordItem
+            {
+                Word = "Water",
+                Translation = "Вода",
+                Transcription = "[ˈwɔːtər]",
+                Example = "Please drink more water."
+            });
+
+            Words.Add(new WordItem
+            {
+                Word = "Friend",
+                Translation = "Друг",
+                Transcription = "[frend]",
+                Example = "My friend lives in another city."
+            });
+
+            Words.Add(new WordItem
+            {
+                Word = "Computer",
+                Translation = "Компьютер",
+                Transcription = "[kəmˈpjuːtər]",
+                Example = "I use my computer for work."
+            });
+
+            Words.Add(new WordItem
+            {
+                Word = "Phone",
+                Translation = "Телефон",
+                Transcription = "[fəʊn]",
+                Example = "Her phone is on the table."
+            });
+
+            Words.Add(new WordItem
+            {
+                Word = "Teacher",
+                Translation = "Учитель",
+                Transcription = "[ˈtiːtʃər]",
+                Example = "Our teacher is very kind."
+            });
+
+            Words.Add(new WordItem
+            {
+                Word = "Family",
+                Translation = "Семья",
+                Transcription = "[ˈfæməli]",
+                Example = "I spend weekends with my family."
             });
 
             OnSearchTextChanged(
@@ -76,10 +155,8 @@ public partial class Slovar : ContentPage
             Word = word,
             Translation = translation,
             Transcription = transcription,
-            Example = example,
-            Category = string.IsNullOrWhiteSpace(category)
-                ? "Без категории"
-                : category
+            Example = example
+
         });
     }
 
