@@ -1,7 +1,5 @@
 namespace Pra;
 
-using Android.App;
-using Android.Content.Res;
 using Microsoft.Maui.Controls.Shapes;
 
 public partial class exercises : ContentPage
@@ -25,7 +23,7 @@ public partial class exercises : ContentPage
         public string Prompt { get; }
         public string Answer { get; }
         public string Explanation { get; }
-        public string List<string> Pool { get; }
+        public List<string> Pool { get; }
         public Question(  string prompt, string answer, string explanation, params string[] distractors)
         {
                 Prompt = prompt;
@@ -96,7 +94,7 @@ public partial class exercises : ContentPage
         var q = _questions[_index];
         PromptLabel.Text = q.Prompt;
         CounterLabel.Text = $"{_index + 1} / {_questions.Count}";
-        Progress.Progress = (double)_index / _questions.Count;
+        TestProgress.Progress = (double)_index / _questions.Count;
 
         AnswerArea.Children.Clear();
         WordsKeep.Children.Clear();
@@ -177,14 +175,14 @@ public partial class exercises : ContentPage
 
         _answered = true;
         if (isCorrect) _score++;
-        Progress.Progress = (double)(_index + 1) / _questions.Count;
+        TestProgress.Progress = (double)(_index + 1) / _questions.Count;
 
         Banner.IsVisible = true;
         if (isCorrect)
         {
             Banner.BackgroundColor = _lightgreen;
-            Title.Text = "Верно!";
-            Title.TextColor = _dark;
+            BannerTitle.Text = "Верно!";
+            BannerTitle.TextColor = _dark;
             Detail.IsVisible = false;
             Explain.TextColor = _dark;
             CheckButton.BackgroundColor = _lightgreen;
@@ -193,8 +191,8 @@ public partial class exercises : ContentPage
         else
         {
             Banner.BackgroundColor = _dark;
-            Title.Text = "Правильный ответ:";
-            Title.TextColor = _cream;
+            BannerTitle.Text = "Правильный ответ:";
+            BannerTitle.TextColor = _cream;
             Detail.Text = q.Answer;
             Detail.TextColor = _acidgreen;
             Detail.IsVisible = true;

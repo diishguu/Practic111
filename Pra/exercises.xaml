@@ -72,7 +72,7 @@
                         Stroke="Transparent"
                         Padding="14,12">
                     <VerticalStackLayout Spacing="2">
-                        <Label x:Name="Title" Text="" FontSize="15" FontAttributes="Bold"/>
+                        <Label x:Name="BannerTitle" Text="" FontSize="15" FontAttributes="Bold"/>
                         <Label x:Name="Detail" Text="" FontSize="15" FontAttributes="Bold" IsVisible="False"/>
                         <Label x:Name="Explain" Text="" FontSize="15" IsVisible="False" Opacity="0.9" Margin="0,4,0,0" />
                     </VerticalStackLayout>
