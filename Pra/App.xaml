@@ -30,6 +30,12 @@
             <Color x:Key="DynamicCardBackgroundColor">#FFFFFF</Color>
             <Color x:Key="DynamicTextColor">#1F2937</Color>
 
+            <Color x:Key="Dark">#383939</Color>
+            <Color x:Key="Emerald">#149C68</Color>
+            <Color x:Key="LightGreen">#38C958</Color>
+            <Color x:Key="AcidGreen">#AEE637</Color>
+            <Color x:Key="Cream">#FFFEDB</Color>
+
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />

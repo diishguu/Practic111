@@ -45,4 +45,9 @@ public partial class NewPage1 : ContentPage
     {
         await Navigation.PushAsync(new Povtorenie());
     }
+
+    private async void OnExercisesTapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new exercises());
+    }
 }
