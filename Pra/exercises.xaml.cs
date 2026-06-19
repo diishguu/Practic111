@@ -7,44 +7,46 @@ public partial class exercises : ContentPage
 	public exercises()
 	{
 		InitializeComponent();
-
+        // берем цвета из app.xaml
         _dark = (Color)Application.Current.Resources["Dark"];
         _lightgreen = (Color)Application.Current.Resources["LightGreen"];
         _acidgreen = (Color)Application.Current.Resources["AcidGreen"];
         _cream = (Color)Application.Current.Resources["Cream"];
 
-        BuildQuestions();
-        LoadQuestions();
+        BuildQuestions(); // заполние списка вопросов 
+        LoadQuestions(); // показ первого вопроса
 	}
 
     // один вопрос это подсказка, верный ответяснения, слова ловушки
     class Question
     {
-        public string Prompt { get; }
-        public string Answer { get; }
-        public string Explanation { get; }
-        public List<string> Pool { get; }
+        public string Prompt { get; } // это русское предложение
+        public string Answer { get; } // это правильный английскйи ответ
+        public string Explanation { get; } // это объяснение грамматики 
+        public List<string> Pool { get; } // это все слова что используются для ответа
         public Question(  string prompt, string answer, string explanation, params string[] distractors)
         {
                 Prompt = prompt;
                 Answer = answer;
                 Explanation = explanation;
-                var words = answer.Split(' ').ToList(); // слова правильного ответа
-                words.AddRange(distractors); // + лишние слова ловушки
+                var words = answer.Split(' ').ToList(); // разбивание ответа на слова
+                words.AddRange(distractors); // добавление слов ловушек
                 Pool = words;
         }
         
     }
-        readonly List<Question> _questions = new();
+        readonly List<Question> _questions = new(); // все вопросы
         int _index; // индекс текущего вопросв
         int _score; // счетчик верных ответов
         bool _answered; // проверка нажата ли кнопка ответа
 
-    readonly Color _dark;
+    // цвета из реесурсов
+    readonly Color _dark; 
     readonly Color _lightgreen;
     readonly Color _acidgreen;
     readonly Color _cream;
 
+    // наполнение вопросов 
     void BuildQuestions()
     {
         _questions.Add(new Question("Я люблю читать книги", "I like to read books",
@@ -91,23 +93,25 @@ public partial class exercises : ContentPage
 
     void LoadQuestions()
     {
-        var q = _questions[_index];
-        PromptLabel.Text = q.Prompt;
-        CounterLabel.Text = $"{_index + 1} / {_questions.Count}";
+        var q = _questions[_index]; // текущий вопрос
+        PromptLabel.Text = q.Prompt; // русская фраза
+        CounterLabel.Text = $"{_index + 1} / {_questions.Count}"; // тут типа показ счетчика карточек
         TestProgress.Progress = (double)_index / _questions.Count;
 
-        AnswerArea.Children.Clear();
-        WordsKeep.Children.Clear();
+        AnswerArea.Children.Clear(); // чистим зону ответа
+        WordsKeep.Children.Clear(); // чистим хранение слов
 
         // слова в хранении в случайном порядке
         foreach (var w in q.Pool.OrderBy(_ => Guid.NewGuid()))
-            WordsKeep.Children.Add(MakeChip(w));
+            WordsKeep.Children.Add(MakeChip(w)); // создание слова на которое можно тапнуть и собрать ответ
 
-        CheckButton.IsEnabled = false;
+        CheckButton.IsEnabled = false; // если ответ не собран кнопка неактивна
     }
 
+    // здес сам метод создания слова на которое можно тапнуть и собрать ответ
     Border MakeChip(string word)
     {
+        // текст слова
         var label = new Label
         {
             Text = word,
@@ -116,6 +120,7 @@ public partial class exercises : ContentPage
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Center
         };
+        // его рамка
         var chip = new Border
         {
             Content = label,
@@ -126,38 +131,41 @@ public partial class exercises : ContentPage
             Padding = new Thickness(14, 10),
             Margin = new Thickness(4)
         };
+        // обработчик тапа
         var tap = new TapGestureRecognizer();
         tap.Tapped += OnChipTapped;
         chip.GestureRecognizers.Add(tap);
         return chip;
     }
 
-    // тап по слову: хранение слов <=> зона ответа
+    // перенос слова в зону ответа и из зоны ответа
     void OnChipTapped(object sender, TappedEventArgs e)
     {
-        if (_answered) return;   // после проверки слова не двигаем
-        var chip = (Border)sender;
+        if (_answered) return;   // после проверки слова двигать нельзя
+        var chip = (Border)sender; // по какому именно слову тапнули
 
+        // если это слово хранится 
         if (WordsKeep.Children.Contains(chip))
         {
-            WordsKeep.Children.Remove(chip);
-            AnswerArea.Children.Add(chip);
+            WordsKeep.Children.Remove(chip); // убираем
+            AnswerArea.Children.Add(chip); // и кладем в зону ответа
         }
-        else
+        else // иначе она в зоне ответа 
         {
-            AnswerArea.Children.Remove(chip);
-            WordsKeep.Children.Add(chip);
+            AnswerArea.Children.Remove(chip); // возвращаем из зоны ответа
+            WordsKeep.Children.Add(chip); // в зону хранения
         }
 
-        CheckButton.IsEnabled = AnswerArea.Children.Count > 0;
+        CheckButton.IsEnabled = AnswerArea.Children.Count > 0; // кнопка активна если хоть одно слово собрано
     }
 
     private void CheckButton_Clicked(object sender, EventArgs e)
     {
-        // вторая фаза: ответ уже проверен — переходим к следующему вопросу
+        // овтет уже проверен идём к следующему 
         if (_answered)
         {
             _index++;
+            // если индекс достигает большее число чем вопросов то показываем результат, то есть вопросы кончились
             if (_index >= _questions.Count) { ShowResult(); return; }
             ResetForNext();
             LoadQuestions();
@@ -166,17 +174,18 @@ public partial class exercises : ContentPage
 
         // собираем предложение из слов в зоне ответа (по порядку)
         var assembled = string.Join(" ", AnswerArea.Children
-            .OfType<Border>()
-            .Select(b => ((Label)b.Content).Text));
+            .OfType<Border>() // только слова из зоны ответа 
+            .Select(b => ((Label)b.Content).Text)); // достаём текст из каждого
 
         var q = _questions[_index];
         bool isCorrect = string.Equals(assembled.Trim(), q.Answer.Trim(),
-            StringComparison.OrdinalIgnoreCase);
+            StringComparison.OrdinalIgnoreCase); // сравниваем без учета регистра 
 
         _answered = true;
-        if (isCorrect) _score++;
+        if (isCorrect) _score++; // если верно то + балл
         TestProgress.Progress = (double)(_index + 1) / _questions.Count;
 
+        // окошки если ответил верно и неверно
         Banner.IsVisible = true;
         if (isCorrect)
         {
@@ -205,29 +214,30 @@ public partial class exercises : ContentPage
         Explain.Text = "💡 " + q.Explanation;
         Explain.IsVisible = true;
 
-        CheckButton.Text = "Продолжить";
+        CheckButton.Text = "Продолжить"; 
         CheckButton.IsEnabled = true;
     }
+    // сброс перед новым вопросом
     void ResetForNext()
     {
-        _answered = false;
-        Banner.IsVisible = false;
-        Explain.IsVisible = false;
-        CheckButton.Text = "Проверить";
+        _answered = false; // снова можно отвечать 
+        Banner.IsVisible = false; // прячем окошко
+        Explain.IsVisible = false; // пряем объяснение
+        CheckButton.Text = "Проверить"; 
         CheckButton.BackgroundColor = _lightgreen;
         CheckButton.IsEnabled = false;
     }
-
+    // экран итогов
     void ShowResult()
     {
-        QuizView.IsVisible = false;
-        ResultView.IsVisible = true;
+        QuizView.IsVisible = false; //прячем текст
+        ResultView.IsVisible = true; // показ результата
         ResultScore.Text = $"{_score} / {_questions.Count}";
-        int pct = (int)Math.Round(100.0 * _score / _questions.Count);
+        int pct = (int)Math.Round(100.0 * _score / _questions.Count); // подсчет верных ответов в процентах
         ResultPercent.Text = $"{pct}% правильных ответов";
-        ResultEmoji.Text = pct > 80 ? "🎉" : pct > 50 ? "👌" : "✨";
+        ResultEmoji.Text = pct > 80 ? "🎉" : pct > 50 ? "👌" : "✨"; // эмодзи по результату
     }
-
+    // кнопка протйти заново
     private void Button_Clicked(object sender, EventArgs e)
     {
         _index = 0;
