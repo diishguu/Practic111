@@ -25,7 +25,7 @@
         <!--Тест-->
         <Grid x:Name="QuizView"
               Grid.Row="1"
-              RowDefinitions="Auto,Auto,Auto,*" RowSpacing="18"
+              RowDefinitions="Auto,Auto,Auto,*, Auto" RowSpacing="18"
               Padding="20">
             <!--Прогресс теста-->
             <Grid Grid.Row="0" ColumnDefinitions="*, Auto" ColumnSpacing="12">
@@ -33,6 +33,7 @@
                              ProgressColor="{StaticResource LightGreen}"
                              VerticalOptions="Center" HeightRequest="10"/>
                 <Label x:Name="CounterLabel"
+                       Grid.Column="1"
                        FontSize="14"
                        FontAttributes="Bold"
                        TextColor="{StaticResource Dark}"
@@ -58,13 +59,13 @@
                             AlignItems="Start" AlignContent="Start"
                             Direction="Row"/>
             </Border>
-             <!--хранение слов-->
+            <!--хранение слов-->
             <ScrollView Grid.Row="3">
                 <FlexLayout x:Name="WordsKeep" Wrap="Wrap" Direction="Row"
                             AlignItems="Center" AlignContent="Start"/>
             </ScrollView>
             <!--итог и кнопка проверки ответа-->
-            <VerticalStackLayout x:Name="BottomBar" Grid.Row="2"
+            <VerticalStackLayout x:Name="BottomBar" Grid.Row="4"
                                  Padding="20,0,20,20"
                                  Spacing="12">
                 <Border x:Name="Banner" IsVisible="False"
@@ -84,32 +85,84 @@
                         FontAttributes="Bold"
                         IsEnabled="False" Clicked="CheckButton_Clicked"/>
             </VerticalStackLayout>
-            <!--Резульат упражнений-->
-            <VerticalStackLayout x:Name="ResultView" Grid.Row="1" IsVisible="False"
+        </Grid>
+        <!--Резульат упражнений-->
+        <VerticalStackLayout x:Name="ResultView" Grid.Row="1" IsVisible="False"
                                  VerticalOptions="Center" Padding="20" Spacing="16">
-                <Label x:Name="ResultEmoji" Text="🎉" FontSize="64"
+            <Label x:Name="ResultEmoji" Text="🎉" FontSize="64"
                        HorizontalOptions="Center"/>
-                <Label Text="Все упраженения выролнены!" FontSize="24" FontAttributes="Bold"
+            <Label Text="Все упраженения выполнены!" FontSize="24" FontAttributes="Bold"
                        TextColor="{StaticResource Dark}" HorizontalOptions="Center"/>
-                <Border BackgroundColor="{StaticResource Emerald}"
+            <Border BackgroundColor="{StaticResource Emerald}"
                         StrokeShape="RoundRectangle 20" Stroke="Transparent"
                         Padding="20,30" HorizontalOptions="Center">
-                    <VerticalStackLayout Spacing="4">
-                        <Label x:Name="ResultScore" Text="0 / 20" FontSize="40"
+                <VerticalStackLayout Spacing="4">
+                    <Label x:Name="ResultScore" Text="0 / 20" FontSize="40"
                                FontAttributes="Bold" TextColor="{StaticResource Cream}"
                                HorizontalOptions="Center"/>
-                        <Label x:Name="ResultPercent" Text="" FontSize="14"
+                    <Label x:Name="ResultPercent" Text="" FontSize="14"
                                TextColor="{StaticResource Cream}" Opacity="0.85"
                                HorizontalOptions="Center"/>
-                    </VerticalStackLayout>
-                </Border>
-                <Button Text="Пройти заново"
+                </VerticalStackLayout>
+            </Border>
+            <Button Text="Пройти заново"
                         BackgroundColor="{StaticResource LightGreen}"
                         TextColor="{StaticResource Dark}"
                         CornerRadius="16" HeightRequest="54"
                         FontAttributes="Bold"
                         WidthRequest="220" Clicked="Button_Clicked"/>
-            </VerticalStackLayout>
-        </Grid>
+        </VerticalStackLayout>
+        <!--меню-->
+        <Border Grid.Row="2"
+                BackgroundColor="#40C95A"
+                StrokeThickness="0"
+                Padding="10,15">
+            <Border.Shadow>
+                <Shadow Brush="Black" Opacity="0.08" Radius="10" Offset="0,-2" />
+            </Border.Shadow>
+            <Grid ColumnDefinitions="*,*,*,*,*,*">
+                <VerticalStackLayout Grid.Column="0" Spacing="4" HorizontalOptions="Center">
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnUrokTapped" />
+                    </VerticalStackLayout.GestureRecognizers>
+                    <Label Text="Уроки" FontSize="16" TextColor="White" HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="1" Spacing="4" HorizontalOptions="Center">
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnProfileTapped" />
+                    </VerticalStackLayout.GestureRecognizers>
+                    <Label Text="Профиль" FontSize="16" TextColor="White" HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="2" Spacing="4" HorizontalOptions="Center">
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnStaticTapped" />
+                    </VerticalStackLayout.GestureRecognizers>
+                    <Label Text="Статистика" FontSize="16" TextColor="White" HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="3" Spacing="4" HorizontalOptions="Center">
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSlovarTapped" />
+                    </VerticalStackLayout.GestureRecognizers>
+                    <Label Text="Словарь" FontSize="16" TextColor="White" HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="4" Spacing="4" HorizontalOptions="Center">
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnDostigTapped" />
+                    </VerticalStackLayout.GestureRecognizers>
+                    <Label Text="Достижения" FontSize="16" TextColor="White" HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="5" Spacing="4" HorizontalOptions="Center">
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPovtorTapped" />
+                    </VerticalStackLayout.GestureRecognizers>
+                    <Label Text="Повторение" FontSize="16" TextColor="White" HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </Grid>
+        </Border>
     </Grid>
 </ContentPage>

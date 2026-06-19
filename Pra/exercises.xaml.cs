@@ -221,7 +221,7 @@ public partial class exercises : ContentPage
     void ShowResult()
     {
         QuizView.IsVisible = false;
-        ResultView.IsVisible = false;
+        ResultView.IsVisible = true;
         ResultScore.Text = $"{_score} / {_questions.Count}";
         int pct = (int)Math.Round(100.0 * _score / _questions.Count);
         ResultPercent.Text = $"{pct}% правильных ответов";
@@ -236,5 +236,34 @@ public partial class exercises : ContentPage
         ResultView.IsVisible = false;
         QuizView.IsVisible = true;
         LoadQuestions();
+    }
+
+    // нижнее меню
+    private async void OnUrokTapped(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new NewPage1());
+    }
+
+    private async void OnProfileTapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new Profile());
+    }
+
+    private async void OnStaticTapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new Stats());
+    }
+
+    private async void OnSlovarTapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new Slovar());
+    }
+    private async void OnDostigTapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new NewPage2());
+    }
+    private async void OnPovtorTapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new Povtorenie());
     }
 }
